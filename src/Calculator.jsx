@@ -61,7 +61,7 @@ function Calculator() {
          }
          }>C</button>
          <button onClick={()=>{
-            setValue((prev)=>{setValue(prev+0);})
+            setValue((prev)=>prev+0)
          }}>0</button>
          <button onClick={()=>{
             setOutput(evaluate(value));
