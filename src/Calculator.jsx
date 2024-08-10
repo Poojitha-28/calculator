@@ -64,7 +64,11 @@ function Calculator() {
             setValue((prev)=>prev+0)
          }}>0</button>
          <button onClick={()=>{
+            try{
             setOutput(evaluate(value));
+            }catch{
+                setOutput('Error');
+            }
          }}>=</button>
          <button onClick={()=>{
             setValue((prev)=>{setValue(prev+'/');})
